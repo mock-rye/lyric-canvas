@@ -123,3 +123,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# misc stuff, probably created by the scripts during runtime
+allWords.json
