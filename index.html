@@ -29,17 +29,23 @@
 				else document.getElementById('output').innerHTML = 'Output should go here';
 			}
 		</script>
+		
 		<style type="text/css">
 			*{
 				text-align: justify;
 			}
 			body{
-				background-color:black
+				background-color:black;
+				color: #89D1FE;
 			}
 			.column {
 				float: left;
 				color: green;
 				height: 1000px;
+			}
+			. row {
+				width: 100%;
+				height: 20px;
 			}
 			#left, #right {
 				background-color: #ffff00;
@@ -49,7 +55,11 @@
 				background-color: #ffff99;
 				width: 50%;
 			}
+			a {
+				background-color: #89D1FE;
+			}
 		</style>
+		
 	</head>
 	<body>
 		<div class="column" id="left">
@@ -68,10 +78,13 @@
 			coming soon(tm)
 		</div>
 		<div class="column" id="right">
-			The (god-awful) code behind this website is released under GPLv3 <br>
+			The (god-awful) code behind this website is released under GPLv3 at <a href="https://github.com/raimaaan03/madlibs-generator">its repository</a><br>
 			The database behind this website is provided by Wikidata under CC0<br>
 			whatever else goes in the right column.<br>
 			coming soon(tm)
+		</div>
+		<div class="row">
+			hey congrats! you made it to the bottom!
 		</div>
 	</body>
 </html>
