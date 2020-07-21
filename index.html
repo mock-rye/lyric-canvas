@@ -1,9 +1,36 @@
 <!DOCTYPE html>
+
 <html>
+	<meta charset="UTF-8">
 	<head>
+		<script type="text/javascript" src="web/main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			const words = (function() {
+				var json = null;
+					$.ajax({
+						'async': false,
+						'global': false,
+						'url': "web/allWords.json",
+						'dataType': "json",
+						'success': function(data) {
+							json = data;
+						}
+					});
+				return json;
+			})();;
+		</script>
+		<script>
+			function getMadlibs(){
+				var format = document.getElementById('format').value;
+				var out = madlibs(format);
+				if(out) document.getElementById('output').innerHTML = out;
+				else document.getElementById('output').innerHTML = 'Output should go here';
+			}
+		</script>
 		<style type="text/css">
 			*{
-				text-align: center;
+				text-align: justify;
 			}
 			body{
 				background-color:black
@@ -25,14 +52,25 @@
 	</head>
 	<body>
 		<div class="column" id="left">
-			whatever goes in the left column
+			Madlibs format:<br>
+			<input type="text" name="format" id="format" value="">
+			<input type="button" value="Generate" onclick="getMadlibs()"><br>
+			[a] gets replaced with an adjverb<br>
+			[j] gets replaced with an adjective<br>
+			[v] gets replaced with a verb<br>
+			[n] gets replaced with a noun<br>
+			anything else stays as it is (ideally)<br>
+			<p><mark id="output"> Output should go here </mark></p>
 		</div>
 		<div class="column" id="middle">
-			whatever goes in the middle column
-			<script src="main.js"></script>
+			whatever goes in the middle column.<br>
+			coming soon(tm)
 		</div>
 		<div class="column" id="right">
-			whatever goes in the right column
+			The code behind this website is released under GPLv3 <br>
+			The database behind this website is provided by Wikidata under CC0<br>
+			whatever else goes in the right column.<br>
+			coming soon(tm)
 		</div>
 	</body>
 </html>
