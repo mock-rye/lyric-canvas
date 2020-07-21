@@ -26,7 +26,7 @@
 				var format = document.getElementById('format').value;
 				var out = madlibs(format);
 				if(out) document.getElementById('output').innerHTML = out;
-				else document.getElementById('output').innerHTML = 'Output should go here';
+				else document.getElementById('output').innerHTML = '<p> Output should go here </p>';
 			}
 		</script>
 		
@@ -47,7 +47,7 @@
 			}
 			#left, #right {
 				text-align: justify;
-				background-color: #ffff00;
+				background-color: #f0eec7;
 				width: 25%;
 			}
 			#middle {
@@ -56,7 +56,9 @@
 				width: 50%;
 			}
 			a {
-				background-color: #89D1FE;
+				color: blue;
+				background-color: #b5e0ed;
+				text-decoration: none;
 			}
 			#text-area {
 				min-height: 500px;
@@ -65,6 +67,14 @@
 				height: 100%;
 				padding-left: 5%;
 				padding-right: 5%;
+			}
+			#output {
+				color: white;
+				background-color: #4da6ff;
+				min-width: 20%;
+				min-height: 50px;
+				text-align: center;
+				vertical-align: middle;
 			}
 		</style>
 		
@@ -79,7 +89,7 @@
 			[v] gets replaced with a verb<br>
 			[n] gets replaced with a noun<br>
 			anything else stays as it is (ideally)<br>
-			<p><mark id="output"> Output should go here </mark></p>
+			<div id="output"><p> Output should go here </p></div>
 		</div>
 		<div class="column" id="middle">
 			<p>hey you can write down your notes here!</p>
