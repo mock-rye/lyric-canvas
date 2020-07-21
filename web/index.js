@@ -18,6 +18,11 @@ function getRandom(typ){
 	return word;
 }
 
+function cleanUp(string){
+	return string.replaceAll('  ', ' '); //double spaces for one space
+}
+
+
 function processMadlibs(A){
 //	console.log(words['noun'][123]);
 	output = A;
@@ -26,10 +31,10 @@ function processMadlibs(A){
 //		console.log(getRandom(type));
 		while(output.includes(type)){
 //			console.log(type)
-			output = output.replace(type, getRandom(types[type]));
+			output = output.replace(type, ' ' + getRandom(types[type]));
 		}
 	}
-	return String(output);
+	return cleanUp(output);
 }
 
 function madlibs(A){

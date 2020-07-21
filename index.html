@@ -4,7 +4,7 @@
 	<title> Song idea generator </title>
 	<meta charset="UTF-8">
 	<head>
-		<script type="text/javascript" src="web/main.js"></script>
+		<script type="text/javascript" src="web/index.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script>
 			const words = (function() {
@@ -26,7 +26,7 @@
 				var format = document.getElementById('format').value;
 				var out = madlibs(format);
 				if(out) document.getElementById('output').innerHTML = out;
-				else document.getElementById('output').innerHTML = '<p> Output should go here </p>';
+				else document.getElementById('output').innerHTML = 'Output would go here';
 			}
 		</script>
 		
@@ -71,10 +71,14 @@
 			#output {
 				color: white;
 				background-color: #4da6ff;
-				min-width: 20%;
-				min-height: 50px;
-				text-align: center;
-				vertical-align: middle;
+				width: 90%;
+				padding: 5%;
+				min-height: 100px;
+				text-align: justify;
+				overflow: auto;
+				white-space: pre-line;
+				overflow-wrap: break-word;
+				hyphens: auto;
 			}
 		</style>
 		
@@ -89,7 +93,8 @@
 			[v] gets replaced with a verb<br>
 			[n] gets replaced with a noun<br>
 			anything else stays as it is (ideally)<br>
-			<div id="output"><p> Output should go here </p></div>
+			adds spaces if you forget them<br><br>
+			<div id="output">Output should go here</div>
 		</div>
 		<div class="column" id="middle">
 			<p>hey you can write down your notes here!</p>
