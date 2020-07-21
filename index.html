@@ -31,32 +31,40 @@
 		</script>
 		
 		<style type="text/css">
-			*{
-				text-align: justify;
-			}
-			body{
+			body {
 				background-color:black;
 				color: #89D1FE;
 			}
 			.column {
+				min-height: 750px;
 				float: left;
 				color: green;
-				height: 1000px;
+				height: 100%;
 			}
-			. row {
+			.row {
 				width: 100%;
 				height: 20px;
 			}
 			#left, #right {
+				text-align: justify;
 				background-color: #ffff00;
 				width: 25%;
 			}
 			#middle {
+				text-align: center;
 				background-color: #ffff99;
 				width: 50%;
 			}
 			a {
 				background-color: #89D1FE;
+			}
+			#text-area {
+				min-height: 500px;
+				min-width: 40%;
+				width: 60%;
+				height: 100%;
+				padding-left: 5%;
+				padding-right: 5%;
 			}
 		</style>
 		
@@ -66,7 +74,7 @@
 			Madlibs format:<br>
 			<input type="text" name="format" id="format" value="">
 			<input type="button" value="Generate" onclick="getMadlibs()"><br>
-			[a] gets replaced with an adjverb<br>
+			[a] gets replaced with an adverb<br>
 			[j] gets replaced with an adjective<br>
 			[v] gets replaced with a verb<br>
 			[n] gets replaced with a noun<br>
@@ -74,12 +82,12 @@
 			<p><mark id="output"> Output should go here </mark></p>
 		</div>
 		<div class="column" id="middle">
-			whatever goes in the middle column.<br>
-			coming soon(tm)
+			<p>hey you can write down your notes here!</p>
+			<textarea id = "text-area"></textarea>
 		</div>
 		<div class="column" id="right">
 			The (god-awful) code behind this website is released under GPLv3 at <a href="https://github.com/raimaaan03/madlibs-generator">its repository</a><br>
-			The database behind this website is provided by Wikidata under CC0<br>
+			The database behind this website is provided by <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> under CC0<br>
 			whatever else goes in the right column.<br>
 			coming soon(tm)
 		</div>
