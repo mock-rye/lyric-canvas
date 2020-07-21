@@ -8,7 +8,7 @@ run `getData.py` to get all of the required data\
 you're ready to go! run `madlibs.py` to get all the madlibs you want!
 
 # usage
-\[a\] gets replaced with an adjverb\
+\[a\] gets replaced with an adverb\
 \[j\] gets replaced with an adjective\
 \[v\] gets replaced with a verb\
 \[n\] gets replaced with a noun\
