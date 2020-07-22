@@ -5,6 +5,20 @@ const types = {
     '[a]':'adverb'
 }
 
+function getWordset() {
+	var json = null;
+		$.ajax({
+			'async': false,
+			'global': false,
+			'url': "web/allWords.json",
+			'dataType': "json",
+			'success': function(data) {
+				json = data;
+			}
+		});
+	return json;
+}
+
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
