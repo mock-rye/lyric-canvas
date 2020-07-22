@@ -41,6 +41,13 @@ function madlibs(A){
 //	console.log(words)
 //	console.log('madlibs('+ A +')');
 	var result = processMadlibs(A);
-	console.log(result);
+//	console.log(result);
 	return result;
+}
+
+function getMadlibs(){
+	var format = document.getElementById('format').value;
+	var out = madlibs(format);
+	if(out) document.getElementById('output').innerHTML = out;
+	else document.getElementById('output').innerHTML = 'Output would go here';
 }
