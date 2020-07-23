@@ -17,16 +17,9 @@
 			<input type="text" name="format" id="format" value="">
 			<input type="button" value="Generate" onclick="getMadlibs()"><br>
 			<label for="language">Language:</label>
-			<select name="language" id="language"></select><br>
-			<script>
-				displayLangs();
-			</script>
-			[a] gets replaced with an adverb<br>
-			[j] gets replaced with an adjective<br>
-			[v] gets replaced with a verb<br>
-			[n] gets replaced with a noun<br>
-			anything else stays as it is (ideally)<br>
-			adds spaces if you forget them<br><br>
+			<select name="language" id="language"></select><script>document.getElementById('language').innerHTML = displayLangs();</script>
+			<p id="types"><p><script>document.getElementById('types').innerHTML = displayTypes();</script>
+			anything else stays as it is (ideally)<br><br>
 			<div id="output">Output should go here</div>
 		</div>
 		<div class="column" id="middle">

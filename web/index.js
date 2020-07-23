@@ -15,7 +15,15 @@ function displayLangs(){
 	for(lang in languages){
 		show += ('<option value="'+lang+'">'+languages[lang]+'</option>');
 	}
-	document.getElementById('language').innerHTML = show;
+	return show;
+}
+
+function displayTypes(){
+	var show = '';
+	for(type in types){
+		show += (type+': '+types[type]+'<br>');
+	}
+	return show;
 }
 
 function getWordset() {
