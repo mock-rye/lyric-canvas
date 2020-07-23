@@ -12,12 +12,12 @@ body {
 	width: 100%;
 	height: 20px;
 }
-#left, #right {
+.column#left, .column#right {
 	text-align: justify;
 	background-color: #f0eec7;
 	width: 25%;
 }
-#middle {
+.column#middle {
 	text-align: center;
 	background-color: #ffff99;
 	width: 50%;

@@ -5,6 +5,10 @@ const types = {
     '[a]':'adverb'
 }
 
+function displayLangs(){
+	
+}
+
 function getWordset() {
 	var json = null;
 		$.ajax({
@@ -23,45 +27,36 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-function getRandom(typ){
-//	console.log(words['noun'][123]);
-	let parts = words[typ];
-//	console.log(parts);
-	word = parts[getRndInteger(0, parts.length-1)];
-//	console.log(word);
-	return word;
-}
-
 function cleanUp(string){
 	return string.replaceAll('  ', ' '); //double spaces for one space
 }
 
+function getRandom(typ, langWords){
+	let parts = langWords[typ];
+	word = parts[getRndInteger(0, parts.length-1)];
+	return word;
+}
 
-function processMadlibs(A){
-//	console.log(words['noun'][123]);
+
+function processMadlibs(A, langWords){
 	output = A;
 	for(type in types){
-//		console.log(types[type]);
-//		console.log(getRandom(type));
 		while(output.includes(type)){
 //			console.log(type)
-			output = output.replace(type, ' ' + getRandom(types[type]));
+			output = output.replace(type, ' ' + getRandom(types[type], langWords));
 		}
 	}
 	return cleanUp(output);
 }
 
-function madlibs(A){
-//	console.log(words)
-//	console.log('madlibs('+ A +')');
-	var result = processMadlibs(A);
-//	console.log(result);
-	return result;
-}
-
 function getMadlibs(){
+	var language = document.getElementById('language').value;
+	var langWords = words[language];
 	var format = document.getElementById('format').value;
-	var out = madlibs(format);
-	if(out) document.getElementById('output').innerHTML = out;
-	else document.getElementById('output').innerHTML = 'Output would go here';
+	
+	var out = processMadlibs(format, langWords);
+	
+	var outplace = document.getElementById('output');
+	if(out) outplace.innerHTML = out;
+	else outplace.innerHTML = 'Output would go here';
 }
