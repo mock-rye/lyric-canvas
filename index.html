@@ -4,17 +4,34 @@
 	<title> Lyric Canvas </title>
 	<meta charset="UTF-8">
 	<head>
-		<link rel="stylesheet" type="text/css" href="web/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
 	</head>
 	<body>
 		<div class="column" id="left-column">
+			<label for="concept-box"> Concept: </label><br>
+			<textarea class="small-box" id="concept-box"></textarea><br>
 			stuck? try the <a href="pages/madlibs.html">madlibs generator</a>!
+			<hr>
+			<label for="bridge-box"> Bridge: </label><br>
+			<textarea class="medium-box" id="bridge-box"></textarea><br>
+			<hr>
+			<label for="notes-box"> Random notes: </label><br>
+			<textarea class="medium-box" id="notes-box"></textarea><br>
+			<hr>
 		</div>
 		<div class="column" id="middle-column">
-			<p>hey you can write down your notes here!</p>
-			<textarea id = "text-area"></textarea>
+			<label for="song-title">Title:</label><br>
+			<input type="text" class="title-box"><br><br>
+			<label for="chorus-box"> The Chorus: </label><br>
+			<textarea class="center-box" id="chorus-box"></textarea>
 		</div>
 		<div class="column" id="right-column">
+			<br><br><br><br><hr>
+			<label for="verse1-box"> Verse 1: </label><br>
+			<textarea class="medium-box" id="verse1-box"></textarea><br>
+			<hr>
+			<label for="verse2-box"> Verse 2: </label><br>
+			<textarea class="medium-box" id="verse2-box"></textarea><br>
 		</div>
 		<div class="row">
 			The (god-awful) code behind this website is released under GPLv3 at <a href="https://github.com/raimaaan03/lyric-canvas">its repository</a><br>
