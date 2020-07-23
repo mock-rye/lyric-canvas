@@ -67,7 +67,7 @@ function processMadlibs(format, langWords){
 	return cleanUp(output);
 }
 
-function getMadlibs(){
+function getMadlibs(words){
 	var language = document.getElementById('language').value;
 	var langWords = words[language];
 	var format = document.getElementById('format').value;

@@ -15,7 +15,7 @@
 		<div class="column" id="left-column">
 			<label for="format"> Madlibs format:</label><br>
 			<input type="text" name="format" id="format">
-			<input type="button" value="Generate" onclick="getMadlibs()"><br>
+			<input type="button" value="Generate" onclick="getMadlibs(words)"><br>
 			<label for="language">Language:</label>
 			<select name="language" id="language"></select><script>document.getElementById('language').innerHTML = displayLangs();</script>
 			<p id="types"><p><script>document.getElementById('types').innerHTML = displayTypes();</script>
