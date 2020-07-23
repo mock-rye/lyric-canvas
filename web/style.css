@@ -5,6 +5,7 @@ body {
 }
 .column {
 	min-height: 750px;
+	height: 100%;
 	float: left;
 	color: green;
 	height: 100%;
