@@ -5,8 +5,17 @@ const types = {
     '[a]':'adverb'
 }
 
+const languages = {
+	'en': 'English',
+	'es': 'Spanish'
+}
+
 function displayLangs(){
-	
+	var show = '';
+	for(lang in languages){
+		show += ('<option value="'+lang+'">'+languages[lang]+'</option>');
+	}
+	document.getElementById('language').innerHTML = show;
 }
 
 function getWordset() {
@@ -38,8 +47,9 @@ function getRandom(typ, langWords){
 }
 
 
-function processMadlibs(A, langWords){
-	output = A;
+function processMadlibs(format, langWords){
+	if(format === '') return 'Output would go here';
+	output = format;
 	for(type in types){
 		while(output.includes(type)){
 //			console.log(type)
@@ -56,7 +66,5 @@ function getMadlibs(){
 	
 	var out = processMadlibs(format, langWords);
 	
-	var outplace = document.getElementById('output');
-	if(out) outplace.innerHTML = out;
-	else outplace.innerHTML = 'Output would go here';
+	document.getElementById('output').innerHTML = out;
 }
