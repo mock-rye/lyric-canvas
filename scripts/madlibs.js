@@ -37,6 +37,7 @@ function getWordset() {
 				json = data;
 			}
 		});
+		console.log(json);
 	return json;
 }
 
