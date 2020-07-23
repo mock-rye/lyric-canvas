@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-	<title> Song idea generator </title>
+	<title> Madlibs generator </title>
 	<meta charset="UTF-8">
 	<head>
 		<link rel="stylesheet" type="text/css" href="../web/style.css">
@@ -14,7 +14,7 @@
 	<body>
 		<div class="column" id="left-column">
 			Madlibs format:<br>
-			<input type="text" name="format" id="format" value="">
+			<input type="text" name="format" id="format">
 			<input type="button" value="Generate" onclick="getMadlibs()"><br>
 			<label for="language">Language:</label>
 			<select name="language" id="language"></select><script>document.getElementById('language').innerHTML = displayLangs();</script>
@@ -27,12 +27,10 @@
 			<textarea id = "text-area"></textarea>
 		</div>
 		<div class="column" id="right-column">
+			<a href="/lyric-canvas/"> [back home]</a><br>
 			The (god-awful) code behind this website is released under GPLv3 at <a href="https://github.com/raimaaan03/lyric-canvas">its repository</a><br>
 			The database behind this website is provided by <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> under CC0<br>
-			<p>database cleanup coming soon</p>
-		</div>
-		<div class="row">
-			hey congrats! you made it to the bottom!
+			database cleanup coming soon
 		</div>
 	</body>
 </html>
