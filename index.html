@@ -5,28 +5,16 @@
 	<meta charset="UTF-8">
 	<head>
 		<link rel="stylesheet" type="text/css" href="web/style.css">
-		<script type="text/javascript" src="web/index.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script>
-			const words = getWordset();
-		</script>
 	</head>
 	<body>
-		<div class="column" id="left">
-			Madlibs format:<br>
-			<input type="text" name="format" id="format" value="">
-			<input type="button" value="Generate" onclick="getMadlibs()"><br>
-			<label for="language">Language:</label>
-			<select name="language" id="language"></select><script>document.getElementById('language').innerHTML = displayLangs();</script>
-			<p id="types"><p><script>document.getElementById('types').innerHTML = displayTypes();</script>
-			anything else stays as it is (ideally)<br><br>
-			<div id="output">Output should go here</div>
+		<div class="column" id="left-column">
+			stuck? try the <a href="pages/madlibs.html">madlibs generator</a>!
 		</div>
-		<div class="column" id="middle">
+		<div class="column" id="middle-column">
 			<p>hey you can write down your notes here!</p>
 			<textarea id = "text-area"></textarea>
 		</div>
-		<div class="column" id="right">
+		<div class="column" id="right-column">
 			The (god-awful) code behind this website is released under GPLv3 at <a href="https://github.com/raimaaan03/lyric-canvas">its repository</a><br>
 			The database behind this website is provided by <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> under CC0<br>
 			<p>database cleanup coming soon</p>
