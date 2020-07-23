@@ -4,8 +4,8 @@
 	<title> Madlibs generator </title>
 	<meta charset="UTF-8">
 	<head>
-		<link rel="stylesheet" type="text/css" href="../web/style.css">
-		<script type="text/javascript" src="../web/madlibs.js"></script>
+		<link rel="stylesheet" type="text/css" href="../assets/style.css">
+		<script type="text/javascript" src="../scripts/madlibs.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
 			const words = getWordset();
@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div class="column" id="left-column">
-			Madlibs format:<br>
+			<label for="format"> Madlibs format:</label><br>
 			<input type="text" name="format" id="format">
 			<input type="button" value="Generate" onclick="getMadlibs()"><br>
 			<label for="language">Language:</label>
@@ -24,7 +24,7 @@
 		</div>
 		<div class="column" id="middle-column">
 			<p>hey you can write down your notes here!</p>
-			<textarea id = "text-area"></textarea>
+			<textarea class="center-box"></textarea>
 		</div>
 		<div class="column" id="right-column">
 			<a href="/lyric-canvas/"> [back home]</a><br>

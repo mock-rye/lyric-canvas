@@ -31,13 +31,12 @@ function getWordset() {
 		$.ajax({
 			'async': false,
 			'global': false,
-			'url': "/lyric-canvas/web/allWords.json",
+			'url': "/lyric-canvas/assets/allWords.json",
 			'dataType': "json",
 			'success': function(data) {
 				json = data;
 			}
 		});
-		console.log(json);
 	return json;
 }
 
