@@ -126,4 +126,4 @@ dmypy.json
 
 # misc stuff, probably created by the scripts during runtime
 *.json
-!/web/allWords.json
+!/assets/allWords.json
